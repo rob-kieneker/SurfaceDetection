@@ -1,0 +1,8 @@
+[
+  {
+    "model": "travel_test_1",
+    "speed": 30,
+    "endurance": 3000,
+    "arrival_rate": 0.1
+  }
+]

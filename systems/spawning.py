@@ -1,0 +1,3 @@
+"""
+Spawns new travelling Agents
+"""
