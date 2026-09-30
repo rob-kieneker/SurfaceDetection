@@ -1,14 +1,13 @@
 """
 Grouping of Agent types by similar characteristics
 """
-import pandas as pd
 import numpy as np
-
-from entities.agent import Agent
-from fleets.agent_specs import AgentType, AgentState
-from services.spatial.point import Point
+import pandas as pd
 
 from config.settings.simulation_settings import SIMULATION_TIME
+from entities.agent import Agent
+from fleets.agent_specs import AgentState, AgentType
+from services.spatial.point import Point
 
 fleet_id = 0
 

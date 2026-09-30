@@ -1,8 +1,8 @@
 import logging
 
-from utils.logging_utils import setup_logging
-from simulation.core import initiate_simulation
 from config.settings import simulation_settings
+from simulation.core import initiate_simulation
+from utils.logging_utils import setup_logging
 
 setup_logging(level=logging.DEBUG)
 

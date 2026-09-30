@@ -1,5 +1,6 @@
 import math
 from enum import Enum
+
 from config.settings import calculation_settings
 
 

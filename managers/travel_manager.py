@@ -2,6 +2,7 @@
 Coordinates travelling agents
 """
 from base_manager import Manager
+
 from simulation.event_bus import EventBus
 from simulation.world import WorldState
 

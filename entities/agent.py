@@ -1,8 +1,8 @@
 """
 Dataclass containing core agent state information
 """
-from services.spatial import point
 from fleets.agent_specs import AgentState, AgentType
+from services.spatial import point
 
 agent_id = 0
 

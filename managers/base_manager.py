@@ -2,8 +2,9 @@
 Contains high-level logic shared across managers
 """
 from abc import abstractmethod
-from simulation.world import WorldState
+
 from simulation.event_bus import EventBus
+from simulation.world import WorldState
 
 
 class Manager:

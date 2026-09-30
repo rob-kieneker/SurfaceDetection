@@ -3,13 +3,12 @@ Tracks World state
 """
 from collections import defaultdict
 
-from utils.logging_utils import get_logger
-from fleets.fleet import Fleet, initiate_search_fleet, initiate_traveller_fleet
-from fleets.agent_specs import AgentType
 from entities.agent import Agent
 from entities.patrol_location import PatrolLocation
-
-from input.extract_input import extract_traveller_data, extract_searcher_data
+from fleets.agent_specs import AgentType
+from fleets.fleet import Fleet, initiate_search_fleet, initiate_traveller_fleet
+from input.extract_input import extract_searcher_data, extract_traveller_data
+from utils.logging_utils import get_logger
 
 logger = get_logger(__name__)
 

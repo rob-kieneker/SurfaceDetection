@@ -2,24 +2,20 @@
 Main simulation loop management
 """
 
-from world import create_world_state
-
-
 import logging
 
-from simulation.world import WorldState
-from simulation.event_bus import EventBus
-
-from systems.movement import MovementSystem
-from systems.detection import DetectionSystem
-from systems.endurance import EnduranceSystem
-from systems.maintenance import MaintenanceSystem
-from systems.statistics import StatisticsSystem
+from world import create_world_state
 
 from managers.search_manager import SearchManager
 from managers.travel_manager import TravelManager
-
+from simulation.event_bus import EventBus
 from simulation.scheduler import Scheduler
+from simulation.world import WorldState
+from systems.detection import DetectionSystem
+from systems.endurance import EnduranceSystem
+from systems.maintenance import MaintenanceSystem
+from systems.movement import MovementSystem
+from systems.statistics import StatisticsSystem
 
 logger = logging.getLogger(__name__)
 

@@ -1,11 +1,12 @@
+import logging
+
 import numpy as np
 from ortools.linear_solver import pywraplp
 
 from fleets.fleet import Fleet
-from simulation.scheduler import Scheduler
 from services.planning.cyclic_scheduler import create_valid_offsets
+from simulation.scheduler import Scheduler
 
-import logging
 logging.basicConfig()
 logger = logging.getLogger(__name__)
 
