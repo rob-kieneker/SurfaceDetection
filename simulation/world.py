@@ -1,6 +1,7 @@
 """
 Tracks World state
 """
+
 from collections import defaultdict
 
 from entities.agent import Agent
@@ -26,7 +27,7 @@ class WorldState:
 
         # Entities
         self.agents: list[Agent] = []
-        self.fleets: dict[AgentType: Fleet] = {}
+        self.fleets: dict[AgentType, Fleet] = {}
         self.patrol_locations: list[PatrolLocation] = []
 
         # Agent slices

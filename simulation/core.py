@@ -35,8 +35,6 @@ class SimulationEngine:
         self.event_bus = EventBus()
         self.scheduler = Scheduler()
 
-        self.world.event_bus = self.event_bus
-
         self.managers = [
             SearchManager(self.world, self.event_bus),
             TravelManager(self.world, self.event_bus),
@@ -68,7 +66,7 @@ class SimulationEngine:
                 world=self.world,
                 event_bus=self.event_bus,
                 scheduler=self.scheduler,
-                dt=dt
+                dt=dt,
             )
 
         for manager in self.managers:

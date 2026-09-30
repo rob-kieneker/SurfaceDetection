@@ -1,6 +1,7 @@
 """
 Grouping of Agent types by similar characteristics
 """
+
 import numpy as np
 import pandas as pd
 
@@ -22,6 +23,7 @@ class Fleet:
     """
     Fleets contain set of agents with shared characteristics
     """
+
     def __init__(self, agent_type: AgentType, agents: list[Agent]):
         self.fleet_id = assign_fleet_id()
         self.agent_type = agent_type
@@ -63,15 +65,16 @@ def initiate_traveller_fleet(df: pd.DataFrame) -> Fleet:
      - "endurance" float in km
      - "arrival_rate" float poisson arrival rate (lambda), arrivals per timestep
     :return:
+        Fleet
     """
     agent_type = AgentType.TRAVELLER
     agents = []
     base_location = Point(0, 0)
 
     for row in df.itertuples():
-        model: str = row.model,
-        speed: float = row.speed,
-        endurance: float = row.endurance,
+        model: str = row.model
+        speed: float = row.speed
+        endurance: float = row.endurance
         arrival_rate: float = row.arrival_rate
 
         for a_t in sample_arrivals(arrival_rate):
@@ -100,7 +103,7 @@ def sample_arrivals(arrival_rate: float) -> list[float]:
     arrival_times = []
 
     while arrival_time < SIMULATION_TIME:
-        inter_arrival_time = np.random.exponential(scale=1/arrival_rate)
+        inter_arrival_time = np.random.exponential(scale=1 / arrival_rate)
         arrival_time += inter_arrival_time
         arrival_times.append(arrival_time)
 
